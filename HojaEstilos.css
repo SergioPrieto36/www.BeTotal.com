@@ -1,0 +1,122 @@
+/* Reset básico para márgenes y paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #0b3d0b; /* verde oscuro, parecido a bet365 */
+  color: #f0f0f0; /* texto claro para contraste */
+  line-height: 1.5;
+}
+#app {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f5f1e9; /* marfil claro */
+  border: 2px solid #2f4f2f; /* verde oscuro para borde */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(47, 79, 47, 0.5);
+  padding: 20px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #d9c488; /* amarillo suave */
+}
+.logoContainer__logo img {
+  height: 50px;
+  
+}
+.topNav {
+  margin-top: 10px;
+}
+.topNav__menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.topNav__item a {
+  text-decoration: none;
+  color: #2f4f2f; /* verde oscuro */
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+.topNav__item a:hover {
+  background-color: #d9c488; /* amarillo suave */
+  color: #0b3d0b; /* fondo verde oscuro al pasar el cursor */
+}
+.eventsSection {
+  margin-top: 30px;
+}
+.eventsSection h2 {
+  color: #0b3d0b; /* verde oscuro fuerte */
+  margin-bottom: 15px;
+  border-left: 6px solid #d9c488; /* franja amarilla decorativa */
+  padding-left: 10px;
+  font-size: 1.5rem;
+}
+#liveEventsList,
+#upcomingEventsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+.eventCard {
+  background-color: #ffffff;
+  border: 1px solid #d9c488; /* borde amarillo claro */
+  border-radius: 6px;
+  padding: 15px;
+  color: #2f4f2f; /* texto en verde oscuro */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.eventCard h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #0b3d0b; /* título más oscuro */
+}
+.eventCard p {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+.betButton {
+  background-color: #d9c488; /* amarillo suave */
+  color: #0b3d0b; /* texto verde oscuro */
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.betButton:hover {
+  background-color: #c2ab60; /* tono amarillo más fuerte al pasar el cursor */
+}
+footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 2px solid #2f4f2f; /* verde oscuro */
+  text-align: center;
+  color: #2f4f2f;
+  font-size: 0.9rem;
+}
+@media (max-width: 768px) {
+  .topNav__menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #liveEventsList,
+  #upcomingEventsList {
+    grid-template-columns: 1fr;
+  }
+
+  .eventCard {
+    padding: 12px;
+  }
+}
+
